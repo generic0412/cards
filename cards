@@ -1,0 +1,25 @@
+import random
+
+cards = []
+suits = ["Spades", "Clubs", "Hearts", "Diamonds"]
+royals = ["Jack", "Queen", "King", "Ace"]
+deck = []
+
+for x in range(2, 11):
+    cards.append(str(x))
+for y in range(4):
+    cards.append(royals[y])
+
+for m in range(4):
+    for n in range(13):
+        face = (cards[n] + " of " + suits[m])
+        deck.append(face)
+
+
+random.shuffle(deck)
+
+p1 = deck[1]
+deck.remove(p1)
+p2 = deck[1]
+deck.remove(p2)
+
